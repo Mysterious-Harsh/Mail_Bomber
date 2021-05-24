@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.0">
+  <object class="tk.Toplevel" id="mainwindow">
+    <property name="geometry">640x480</property>
+    <property name="height">0</property>
+    <property name="maxsize">700|580</property>
+    <property name="minsize">700|580</property>
+    <property name="width">0</property>
+    <child>
+      <object class="ttk.Labelframe" id="mail_bomber_f">
+        <property name="height">200</property>
+        <property name="labelanchor">n</property>
+        <property name="text" translatable="yes">Mail Bomber</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="label_1">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Email</property>
+            <layout manager="grid">
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="email_e">
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="takefocus">true</property>
+            <property name="width">30</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label_2">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Password</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="password_e">
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="takefocus">true</property>
+            <property name="width">30</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label_4">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Subject</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="subject_e">
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="takefocus">true</property>
+            <property name="width">30</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label_5">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Message  :-</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">5</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Text" id="message_e">
+            <property name="background">#ffffff</property>
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="foreground">#000000</property>
+            <property name="height">10</property>
+            <property name="takefocus">true</property>
+            <property name="width">50</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">6</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label_6">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Attachment</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="attachment_e">
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="takefocus">true</property>
+            <property name="width">30</property>
+            <bind sequence="&lt;Button-1&gt;" handler="add_attachment" add="" />
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">3</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="send_b">
+            <property name="command">send</property>
+            <property name="default">normal</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">Send</property>
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">7</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button_2">
+            <property name="command">add_email</property>
+            <property name="text" translatable="yes">Add Email</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">7</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="button_1">
+            <property name="command">close</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">Close</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="propagate">True</property>
+              <property name="row">7</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label_1_2">
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">Background</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">10</property>
+              <property name="pady">10</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="background_img_e">
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="width">30</property>
+            <bind sequence="&lt;Button-1&gt;" handler="add_background" add="" />
+            <layout manager="grid">
+              <property name="column">1</property>
+              <property name="propagate">True</property>
+              <property name="row">4</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="start_e">
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">0</property>
+            <property name="validate">key</property>
+            <property name="validatecommand">only_digits</property>
+            <property name="validatecommand_args">%S, %P</property>
+            <property name="width">8</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="propagate">True</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Entry" id="end_e">
+            <property name="font">{Arial} 11 {bold}</property>
+            <property name="takefocus">false</property>
+            <property name="validate">key</property>
+            <property name="validatecommand">only_digits</property>
+            <property name="validatecommand_args">%S, %P</property>
+            <property name="width">8</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="propagate">True</property>
+              <property name="row">2</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="to_l">
+            <property name="anchor">center</property>
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">To</property>
+            <property name="width">5</property>
+            <layout manager="grid">
+              <property name="column">2</property>
+              <property name="propagate">True</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
